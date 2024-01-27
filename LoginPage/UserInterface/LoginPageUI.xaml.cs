@@ -1,9 +1,10 @@
 namespace LoginPage.UserInterface;
 
-public partial class LoginPageView : ContentPage
+public partial class LoginPageUI : ContentPage
 {
-	public LoginPageView()
+	public LoginPageUI()
 	{
 		InitializeComponent();
-	}
+        this.BindingContext = new LoginPageUI();
+    }
 }

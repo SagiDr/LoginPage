@@ -8,12 +8,8 @@ namespace LoginPage.Model
 {
     internal class User
     {
-
-        public string Name { get; set; }
+        public string userName { get; set; }
 
         public string password { get; set; }
-
-
-
     }
 }
