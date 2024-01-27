@@ -7,98 +7,66 @@ using System.Threading.Tasks;
 
 namespace LoginPage.Services
 {
-        internal class UsersList
+      internal class UsersList
+      {
+        public List<User> Users { get; private set; }
+        public UsersList()
         {
-            public List<User> Users { get; private set; }
-            public UsersList()
-            {
-                this.Users = new List<User>();
-                FillList();
-            }
-
-            private void FillList()
-            {
-                Users.Add(new User
-                {
-                    userName = "Dan",
-                    password = "Hagit"
-                });
-
-                Users.Add(new User
-                {
-                    userName = "Ori",
-                    password = "Hadas"
-                });
-
-                Users.Add(new User
-                {
-                    userName = "Guy",
-                    password = "Tali"
-                });
-
-                Users.Add(new User
-                {
-                    userName = "Yair",
-                    password = "Meital"
-                });
-
-                Users.Add(new User
-                {
-                    userName = "Yali",
-                    password = "Liat"
-                });
-
-                Users.Add(new User
-                {
-                    userName = "Eitan",
-                    password = "Einat"
-                });
-
-                Users.Add(new User
-                {
-                    userName = "Elad",
-                    password = "Shely"
-                });
-
-                Users.Add(new User
-                {
-                    userName = "Ohad",
-                    password = "Ariela"
-                });
-
-                Users.Add(new User
-                {
-                    userName = "Ran",
-                    password = "Orit"
-                });
-
-                Users.Add(new User
-                {
-                    userName = "Idan",
-                    password = "Dikla"
-                });
-            }
-
-
+            this.Users = new List<User>();
+            FillList();
         }
-        internal class UserService
-        {
-            public UserService()
-            {
-                users = new UsersList().Users;
-            }
-            List<User> users;
 
-            public bool IsUserExist(User check)
+        private void FillList()
+        {
+            Users.Add(new User
             {
-                for (int i = 0; i < users.Count; i++)
+                userName = "Sagi",
+                password = "0000"
+            });
+
+            Users.Add(new User
+            {
+                userName = "Sapir",
+                password = "2345"
+            });
+
+            Users.Add(new User
+            {
+                userName = "Ofer",
+                password = "5454"
+            });
+
+            Users.Add(new User
+            {
+                userName = "Nachom",
+                password = "7677"
+            });
+
+            Users.Add(new User
+            {
+                userName = "Shalom",
+                password = "8888"
+            });
+        }
+      }
+      internal class UserService
+      {
+        public UserService()
+        {
+            users = new UsersList().Users;
+        }
+        List<User> users;
+
+        public bool IsUserExist(User check)
+        {
+            for (int i = 0; i < users.Count; i++)
+            {
+                if (users[i].userName == check.userName && users[i].password == check.password)
                 {
-                    if (users[i].userName == check.userName && users[i].password == check.password)
-                    {
-                        return true;
-                    }
+                    return true;
                 }
-                return false;
             }
+            return false;
         }
+      }
 }
