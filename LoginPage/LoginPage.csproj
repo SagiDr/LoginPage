@@ -62,9 +62,6 @@
 	  <MauiXaml Update="UserInterface\LoginPageUI.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ViewModels\LoginPageUI.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
