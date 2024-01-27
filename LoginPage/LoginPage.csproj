@@ -53,8 +53,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Services\" />
-	  <Folder Include="ViewModels\" />
+	  <Compile Update="UserInterface\LoginPageUI.xaml.cs">
+	    <DependentUpon>LoginPageUI.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="UserInterface\LoginPageUI.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewModels\LoginPageUI.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
