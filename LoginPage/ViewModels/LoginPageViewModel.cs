@@ -107,6 +107,5 @@ namespace LoginPage.ViewModels
             Message = "";
             Color = Colors.Black;
         }
-
     }
 }

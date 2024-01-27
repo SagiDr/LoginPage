@@ -3,20 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginPage.UserInterface.LoginPageUI"
              Title="LoginPageUI">
-    <VerticalStackLayout>
-
+    <VerticalStackLayout
+        Spacing="10" 
+        >
+        
+        
+        
+        <Label>
+        </Label>
+        <Label
+            FontSize="Large"
+            FontFamily="monospace"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Text="Login into your account ;)"
+            >
+        </Label>
+        
         <Entry
+            MaxLength="20"
             Placeholder="Type Username"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             Text="{Binding Username}"/>
-
-        <Label 
+        
+        <Label
             Text="{Binding Username}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
         <Entry
+            MaxLength="20"
             Placeholder="Type Password"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
@@ -28,23 +45,26 @@
             HorizontalOptions="Center" />
 
         <Button
+            WidthRequest="100"
             Text="Login"
             Command="{Binding CheckUserCommand}"
             HorizontalOptions="Center"
             VerticalOptions="Center"/>
 
         <Button
+            WidthRequest="100"
             Text="Cancel"
             Command="{Binding CancelCommand}"
             HorizontalOptions="Center"
             VerticalOptions="Center"/>
 
-        <Label 
+        <Label
+            
+            FontSize="Medium"
             Text="{Binding Message}"
             TextColor="{Binding Color}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-
 
     </VerticalStackLayout>
 </ContentPage>
